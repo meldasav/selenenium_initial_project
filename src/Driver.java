@@ -15,7 +15,7 @@ public class Driver {
     public static WebDriver getDriver(){
         if(driver == null){
 
-        //    System.setProperty("");
+            System.setProperty("WebDriver.chrome.driver","/Users/meldasav/IdeaProjects/selenium_initial_project/chromedriver");
             // Create the object of the web browser that you are automating
             driver = new ChromeDriver();
             driver.manage().window().maximize();
