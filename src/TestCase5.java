@@ -21,8 +21,11 @@ public class TestCase5 {
         contactUsLink.click();
 
         WebElement checkbox= driver.findElement(By.xpath("(//div[@data-ux='Element'])[2]"));
-
-
+        checkbox.click();
+        System.out.println(checkbox.isSelected()?"check box is selected passed" : "check box is failed");
+        checkbox.click();
+        System.out.println(!checkbox.isSelected()?"passed" : "failed");
+        System.out.println(checkbox.getText().equals("Sign up for our email list for updates, promotions, and more."));
         Driver.quitDriver();
     }
 }
